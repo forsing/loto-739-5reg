@@ -34,12 +34,12 @@ HOLDOUT_DRAWS = 250
 REFIT_INTERVAL = 125
 
 LOTO_CSV = Path(
-    "/Users/4c/Desktop/GHQ/data/"
+    "/data/"
     "loto7_4674_k68_loto_2959.csv"
 )
 
 LOTO_PLUS_CSV = Path(
-    "/Users/4c/Desktop/GHQ/data/"
+    "/data/"
     "loto7_4674_k68_loto_plus_1715.csv"
 )
 
@@ -1259,22 +1259,22 @@ NEXT PREDIKCIJE
 ========================================================================
 
 Loto
-RandomForestRegressor          08, 16, 19, 23, 24, 30, 39
-ExtraTreesRegressor            07, 10, 15, 24, 26, 33, 37
-GradientBoostingRegressor      07, 15, 23, 26, 31, 33, 37
-SVR                            03, 13, 15, 26, 31, 32, 39
-KNeighborsRegressor            10, 13, 15, 26, 31, 37, 39
+RandomForestRegressor          08, x, 19, y, 24, z, 39
+ExtraTreesRegressor            07, x, 15, y, 26, z, 37
+GradientBoostingRegressor      07, x, 23, y, 31, z, 37
+SVR                            03, x, 15, y, 31, z, 39
+KNeighborsRegressor            10, x, 15, y, 31, z, 39
 
 Loto Plus
-RandomForestRegressor          02, 03, 32, 33, 36, 38, 39
-ExtraTreesRegressor            04, 23, 29, 32, 33, 34, 39
-GradientBoostingRegressor      05, 13, 23, 32, 36, 38, 39
-SVR                            11, 14, 29, 31, 32, 33, 36
-KNeighborsRegressor            08, 29, 31, 33, 35, 36, 38
+RandomForestRegressor          02, x, 32, y, 36, z, 39
+ExtraTreesRegressor            04, x, 29, y, 33, z, 39
+GradientBoostingRegressor      05, x, 23, y, 36, z, 39
+SVR                            11, x, 29, y, 32, z, 36
+KNeighborsRegressor            08, x, 31, y, 35, z, 38
 
 
 
-Za slučajan proces 7/39 očekivani broj presjeka između dvije sedmočlane kombinacije je:
+Za slučajan proces 7/39 očekivani broj preseka između dve sedmočlane kombinacije je:
 
 E[X] = (7*7)/39 = 49/7 = 1,256
 
