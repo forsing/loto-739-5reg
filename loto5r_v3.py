@@ -1589,29 +1589,86 @@ if __name__ == "__main__":
 
 
 """
-RUN:
+Obrada: Loto - RandomForestRegressor
+Obrada: Loto - ExtraTreesRegressor
+Obrada: Loto - GradientBoostingRegressor
+Obrada: Loto - SVR
+Obrada: Loto - KNeighborsRegressor
+
+Obrada: Loto Plus - RandomForestRegressor
+Obrada: Loto Plus - ExtraTreesRegressor
+Obrada: Loto Plus - GradientBoostingRegressor
+Obrada: Loto Plus - SVR
+Obrada: Loto Plus - KNeighborsRegressor
 
 
-"""
+
+NEXT PREDIKCIJE
+========================================================================
+
+Loto
+RandomForestRegressor          08, x, 19, y, 24, z, 39
+ExtraTreesRegressor            07, x, 15, y, 23, z, 37
+GradientBoostingRegressor      07, x, 23, y, 31, z, 37
+SVR                            02, x, 13, y, 24, z, 31
+KNeighborsRegressor            13, x, 22, y, 28, z, 37
+Ponderisani ansambl            15, x, 24, y, 28, z, 37
+
+Loto Plus
+RandomForestRegressor          05, x, 32, y, 35, z, 39
+ExtraTreesRegressor            04, x, 29, y, 33, z, 39
+GradientBoostingRegressor      05, x, 23, y, 32, z, 39
+SVR                            11, x, 29, y, 32, z, 36
+KNeighborsRegressor            08, x, 31, y, 35, z, 38
+Ponderisani ansambl            05, x, 33, y, 36, z, 39
 
 
 
-"""
-Loto:
-1. RandomForestRegressor: 08, x, 19, y, 24, z, 39
-2. ExtraTreesRegressor: 07, x, 15, y, 23, z, 37
-3. GradientBoostingRegressor: 07, x, 23, y, 31, z, 37
-4. SVR: 02, x, 13, y, 24, z, 31
-5. KNeighborsRegressor: 13, x, 22, y, 28, z, 37
-6. Ponderisani ansambl: 15, x, 24, y, 28, z, 37
+TEŽINE PONDERISANOG ANSAMBLA
+========================================================================
 
-Loto Plus:
-7. RandomForestRegressor: 05, x, 32, y, 35, z, 39
-8. ExtraTreesRegressor: 04, x, 29, y, 33, z, 39
-9. GradientBoostingRegressor: 05, x, 23, y, 32, z, 39
-10. SVR: 11, x, 29, y, 32, z, 36
-11. KNeighborsRegressor: 08, x, 31, y, 35, z, 38
-12. Ponderisani ansambl: 05, x, 33, y, 36, z, 39
+Loto
+RandomForestRegressor          20,3%
+ExtraTreesRegressor            20,2%
+GradientBoostingRegressor      19,7%
+SVR                            19,8%
+KNeighborsRegressor            20,0%
+
+Loto Plus
+RandomForestRegressor          20,5%
+ExtraTreesRegressor            20,5%
+GradientBoostingRegressor      20,2%
+SVR                            18,4%
+KNeighborsRegressor            20,4%
+
+
+
+Za slučajan proces 7/39 očekivani broj presjeka između dvije sedmočlane kombinacije je:
+
+E[X] = (7*7)/39 = 49/7 = 1,256
+
+HOLDOUT
+
+╔════════════╦═══════════════════════════════╦═════════╦════════╦════════╦══════════╗
+║ IGRA       ║ REGRESOR / ANSAMBL            ║ PROSEK  ║ 3+     ║ 4+     ║ MAKSIMUM ║
+╠════════════╬═══════════════════════════════╬═════════╬════════╬════════╬══════════╣
+║ Loto       ║ RandomForestRegressor         ║ 1,252   ║ 8,8%   ║ 1,2%   ║ 4        ║
+║ Loto       ║ ExtraTreesRegressor           ║ 1,196   ║ 7,6%   ║ 0,0%   ║ 3        ║
+║ Loto       ║ GradientBoostingRegressor     ║ 1,280   ║ 8,0%   ║ 1,6%   ║ 4        ║
+║ Loto       ║ SVR                           ║ 1,264   ║ 9,6%   ║ 2,4%   ║ 4        ║
+║ Loto       ║ KNeighborsRegressor           ║ 1,276   ║ 8,4%   ║ 0,8%   ║ 4        ║
+║ Loto       ║ Ponderisani ansambl           ║ 1,264   ║ 9,6%   ║ 1,2%   ║ 4        ║
+╠════════════╬═══════════════════════════════╬═════════╬════════╬════════╬══════════╣
+║ Loto Plus  ║ RandomForestRegressor         ║ 1,172   ║ 8,8%   ║ 0,8%   ║ 4        ║
+║ Loto Plus  ║ ExtraTreesRegressor           ║ 1,184   ║ 6,8%   ║ 0,4%   ║ 4        ║
+║ Loto Plus  ║ GradientBoostingRegressor     ║ 1,188   ║ 8,4%   ║ 0,0%   ║ 3        ║
+║ Loto Plus  ║ SVR                           ║ 1,296   ║ 10,0%  ║ 2,0%   ║ 5        ║
+║ Loto Plus  ║ KNeighborsRegressor           ║ 1,368   ║ 10,8%  ║ 0,8%   ║ 4        ║
+║ Loto Plus  ║ Ponderisani ansambl           ║ 1,228   ║ 9,2%   ║ 2,0%   ║ 5        ║
+╚════════════╩═══════════════════════════════╩═════════╩════════╩════════╩══════════╝
+
+KOMENTAR:
+Rezultati su dobri jer su u očekivanim granicama za loto, koji je slučajan proces.
 """
 
 
