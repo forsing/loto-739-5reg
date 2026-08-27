@@ -1593,3 +1593,33 @@ RUN:
 
 
 """
+
+
+
+"""
+Loto:
+1. RandomForestRegressor: 08, x, 19, y, 24, z, 39
+2. ExtraTreesRegressor: 07, x, 15, y, 23, z, 37
+3. GradientBoostingRegressor: 07, x, 23, y, 31, z, 37
+4. SVR: 02, x, 13, y, 24, z, 31
+5. KNeighborsRegressor: 13, x, 22, y, 28, z, 37
+6. Ponderisani ansambl: 15, x, 24, y, 28, z, 37
+
+Loto Plus:
+7. RandomForestRegressor: 05, x, 32, y, 35, z, 39
+8. ExtraTreesRegressor: 04, x, 29, y, 33, z, 39
+9. GradientBoostingRegressor: 05, x, 23, y, 32, z, 39
+10. SVR: 11, x, 29, y, 32, z, 36
+11. KNeighborsRegressor: 08, x, 31, y, 35, z, 38
+12. Ponderisani ansambl: 05, x, 33, y, 36, z, 39
+"""
+
+
+
+"""
+Na v2 direktno uključeni:
+- nested walk-forward tuning;
+- holdout-ponderisani ansambl pet regresora;
+- dodatni ansambl NEXT predikcije za svaki CSV.
+Ukupno 12 NEXT predikcija.
+"""
