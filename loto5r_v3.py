@@ -34,12 +34,12 @@ HOLDOUT_DRAWS = 250
 REFIT_INTERVAL = 125
 
 LOTO_CSV = Path(
-    "/Users/4c/Desktop/GHQ/data/"
+    "/data/"
     "loto7_4674_k68_loto_2959.csv"
 )
 
 LOTO_PLUS_CSV = Path(
-    "/Users/4c/Desktop/GHQ/data/"
+    "/data/"
     "loto7_4674_k68_loto_plus_1715.csv"
 )
 
@@ -1589,5 +1589,7 @@ if __name__ == "__main__":
 
 
 """
+RUN:
+
 
 """
